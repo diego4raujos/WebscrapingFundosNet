@@ -1,4 +1,4 @@
-# Download Automatizado de Informes Mensais do FundosNet
+# Automação de Downloads de Informes Mensais do sistema Fundos.NET
 
 ## Descrição
 Este repositório contém um projeto que usa Python para automatizar o processo de download de informes mensais estruturados de Fundos de Investimento Imobiliário (Fii's) do sistema FundosNet. Fez-se o uso das bibliotecas Requests e Selenium. O projeto possui apenas fins educacionais e informativo.
