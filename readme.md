@@ -18,9 +18,11 @@ Navegador Mozilla Firefox instalado na sua máquina.
 ```
 git clone https://github.com/diego4raujos/WebscrapingFundosNet.git
 ```
+
 2. Instale as bibliotecas/dependências Python necessárias.
 ```
 pip install -r requirements.txt
+```
 
 3. Modifique a variáveil "fii" do arquivo "scraping.py" informando o CNPJ do Fundo de Investimento Imobiliário desejado.
 
