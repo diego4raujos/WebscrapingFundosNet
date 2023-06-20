@@ -67,27 +67,26 @@ class WebScraper():
             time.sleep(0.5)
             print(nome)
 
-
-fundo_imob = '11728688000147'
+fii = '11728688000147' # cnpj do fundo de investimento imobiliário
 caminho = f'{os.getcwd()}/dados/' #'/home/diego/Projetos/WebscrapingFundosNet/dados/'
 
-fii = WebScraper(fundo_imob)
-fii.cria_diretorio(f'{caminho}{fundo_imob}')
+scraper = WebScraper(fii)
+scraper.cria_diretorio(f'{caminho}{fii}')
 
-fii.acessar_pagina_web()
-fii.pressionar_botao_exibir_filtros()
+scraper.acessar_pagina_web()
+scraper.pressionar_botao_exibir_filtros()
 
-fii.pressionar_dropdown('select2-chosen-2') # categoria
-fii.informar_valor_campo_texto('s2id_autogen2_search', 'Informes Periódicos')
+scraper.pressionar_dropdown('select2-chosen-2') # categoria
+scraper.informar_valor_campo_texto('s2id_autogen2_search', 'Informes Periódicos')
 
-fii.pressionar_dropdown('select2-chosen-3') # tipo
-fii.informar_valor_campo_texto('s2id_autogen3_search', 'Informe Mensal Estruturado')
+scraper.pressionar_dropdown('select2-chosen-3') # tipo
+scraper.informar_valor_campo_texto('s2id_autogen3_search', 'Informe Mensal Estruturado')
 
-fii.pressionar_dropdown('select2-chosen-5') # situação
-fii.informar_valor_campo_texto('s2id_autogen5_search', 'Ativo')
+scraper.pressionar_dropdown('select2-chosen-5') # situação
+scraper.informar_valor_campo_texto('s2id_autogen5_search', 'Ativo')
 
-fii.pressionar_botao_filtrar() # aplica todos os filtros definidos
-fii.modificar_numero_registro_pagina()
+scraper.pressionar_botao_filtrar() # aplica todos os filtros definidos
+scraper.modificar_numero_registro_pagina()
 
-links = fii.coletar_links_validos()
-fii.download_arquivo(f'{caminho}{fundo_imob}/', links)
+links = scraper.coletar_links_validos()
+scraper.download_arquivo(f'{caminho}{fii}/', links)
