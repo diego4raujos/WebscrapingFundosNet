@@ -24,11 +24,11 @@ git clone https://github.com/diego4raujos/WebscrapingFundosNet.git
 pip install -r requirements.txt
 ```
 
-3. Modifique a variáveil "fii" do arquivo "scraping.py" informando o CNPJ do Fundo de Investimento Imobiliário desejado.
+3. Modifique a variáveil "cnpj" do arquivo "scraping.py" informando o CNPJ do Fundo de Investimento Imobiliário desejado.
 
-4. Execute o script "scraping.py" para iniciar a extração dos dados e automação dos downloads.
+4. Execute o script "scraper.py" para iniciar a extração dos dados e automação dos downloads.
 ```
-python3 scraping.py
+python3 scraper.py
 ```
 5. Abra o arquivo "scraping.ipynb" para verificar, de maneira detalhada, o processo de construção e exploração web.
 
